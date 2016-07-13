@@ -1,0 +1,5 @@
+.DS_Store
+*.log
+node_modules
+webpack.config.build.js
+dist

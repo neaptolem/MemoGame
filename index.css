@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+    color: #202020;
+    font: 400 1em/1.4 'Open Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+a {
+    text-decoration: none;
+}
+@media(min-width:768px) {}
+h2 {
+    font-size: 1.333em;
+    font-weight: 600;
+    margin: 0 0 1.12528em
+}
+.site {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+}
+.site-content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    width: 100%
+}
+.site-content::after {
+    content: '\00a0';
+    display: block;
+    margin-top: 1.5em;
+    height: 0;
+    visibility: hidden
+}
+@media(min-width:768px) {
+    .site-content {
+        padding: 2em 0
+    }
+    .site-content::after {
+        margin-top: 2em
+    }
+}
+.site-content--full {
+    padding: 0
+}
+.site-content--full::after {
+    content: none
+}
+.header {
+    padding: 1.5em;
+    background-color: #404040;
+    text-align: center
+}
+.button {
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+    display: inline-block;
+    padding: .6em 1em;
+    background: rgba(147, 128, 108, .15);
+    color: inherit;
+    cursor: pointer;
+    font-size: .8125em;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration: none;
+    white-space: nowrap
+}
+.container {
+    max-width: 50em;
+    margin: 0 auto;
+    text-align: center;
+}
+.tiles {
+    margin-top: 1.8em;
+}
+.flip-container {
+    perspective: 1000;
+    padding: 0;
+    float: left;
+    margin: 10px;
+    list-style: none;
+    width: 176px;
+    height: 176px;
+    cursor: pointer;
+}
+.flip-container img {
+    max-width: 100%;
+}
+.flip-container:hover .front {
+    -webkit-box-shadow: 0 0 10px #ccc;
+}
+.flip-container .flipper.flipped {
+    transform: rotateY(180deg);
+    cursor: not-allowed;
+}
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 0;
+}
+.front {
+    width: 176px;
+    height: 176px;
+    z-index: 2;
+    transform: rotateY(0deg);
+    background-color: maroon;
+    -webkit-transition-property: opacity, transform, box-shadow;
+    -webkit-transition-duration: .3s;
+    -webkit-backface-visibility: hidden;
+}
+.back {
+    transform: rotateY(180deg);
+}

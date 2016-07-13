@@ -1,1 +1,4 @@
-# MemoGame
+```
+npm i
+npm start
+```
