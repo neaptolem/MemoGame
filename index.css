@@ -11,6 +11,20 @@ html {
 a {
     text-decoration: none;
 }
+.about{
+  position: absolute;
+  margin: 10px;
+  display: flex;
+}
+.about object{
+  height: 8em;
+}
+.about p{
+  margin-left: 10px;
+    margin-top: 10px;
+    font-size: 36px;
+    font-family: 'Open Sans', sans-serif;
+}
 @media(min-width:768px) {}
 h2 {
     font-size: 1.333em;
@@ -66,7 +80,7 @@ h2 {
     -webkit-transition: background-color .2s;
     transition: background-color .2s;
     display: inline-block;
-    padding: .6em 1em;
+    padding: 1em 1em;
     background: rgba(147, 128, 108, .15);
     color: inherit;
     cursor: pointer;
@@ -121,7 +135,7 @@ h2 {
     height: 176px;
     z-index: 2;
     transform: rotateY(0deg);
-    background-color: maroon;
+    background-color: mediumseagreen;
     -webkit-transition-property: opacity, transform, box-shadow;
     -webkit-transition-duration: .3s;
     -webkit-backface-visibility: hidden;

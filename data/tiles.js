@@ -13,7 +13,7 @@ export default () => {
             id: i + 1,
             rel: i,
             flipped: false,
-            url: `/static/img/${(i/2)+1}.jpg`,
+            url: `/static/img/${(i/2)+1}a.jpg`,
             discovered: false
         });
     }
